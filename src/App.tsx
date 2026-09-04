@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -17,6 +18,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0b0f17] text-slate-100 flex flex-col selection:bg-cyan-500/25 selection:text-cyan-200 relative overflow-x-hidden">
+      {/* Animated Splash Loading Screen */}
+      <LoadingScreen />
+
       {/* Top Fixed Navbar */}
       <Navbar
         onOpenTerminal={() => setTerminalOpen(true)}
