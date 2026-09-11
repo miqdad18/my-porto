@@ -87,27 +87,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
                 <span>Ringkasan CV</span>
               </button>
             </div>
-
-            {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 w-full max-w-lg">
-              {personalInfo.stats.slice(0, 3).map((item, idx) => (
-                <div
-                  key={idx}
-                  id={`stat-card-${idx}`}
-                  className="bg-[#0f172a]/70 border border-slate-800/90 rounded-xl p-3.5 sm:p-4 text-center hover:border-cyan-500/30 transition-colors shadow-sm"
-                >
-                  <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">
-                    {item.value}
-                  </div>
-                  <div className="text-xs font-semibold text-slate-200 mt-0.5">
-                    {item.label}
-                  </div>
-                  <div className="text-[10px] text-slate-400 hidden sm:block truncate mt-0.5">
-                    {item.description}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Column - Tech Avatar & Orbiting Badges */}
